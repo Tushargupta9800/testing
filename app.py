@@ -12,12 +12,4 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run()
-
-cluster = MongoClient("mongodb+srv://Algoristy:Algoristy@fakenewsdetector.gv1x5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = cluster['test']
-collection = db['test']
-
-post = {"_id": 0, "name": "tushar", "score":5}
-
-collection.insert_one(post)
                       
