@@ -4,8 +4,17 @@ import Secrets.Keys
 import pymongo
 from pymongo import MongoClient
 from flask_restful import Api
+import json
 
 app = Flask(__name__)
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = json.loads(request.get_data())
+    print("here")
+    print(data)
+    print("here")
+    return {"age" : data['age']}
 
 @app.route('/app2/<strx>', methods=['GET'])
 def hello_world(strx):
